@@ -1,7 +1,7 @@
 // Set up the puzzle pieces to be dragged and dropped
 const puzzlePieces = document.querySelectorAll('.puzzle-piece');
 
-// Set the background positions for each piece
+// Define possible positions for the puzzle pieces
 const positions = [
   { top: 0, left: 0 },     // Piece 1 (top-left)
   { top: 0, left: -150 },  // Piece 2 (top-right)
@@ -12,13 +12,12 @@ const positions = [
 // Apply the background positions to each puzzle piece
 puzzlePieces.forEach((piece, index) => {
   piece.style.backgroundImage = "url('image.jpg')"; // Your image URL here
-  piece.style.backgroundPosition = `${positions[index].left}px ${positions[index].top}px`;
   piece.setAttribute('draggable', 'true');
-  
-  // Add event listeners for drag events
-  piece.addEventListener('dragstart', onDragStart);
-  piece.addEventListener('dragend', onDragEnd);
+  piece.setAttribute('data-id', index + 1);
 });
+
+// Shuffle the puzzle pieces randomly
+shufflePieces();
 
 // Handle the dragstart event
 function onDragStart(e) {
@@ -59,4 +58,23 @@ document.querySelector('.puzzle-container').addEventListener('drop', (e) => {
     dropZone.setAttribute('data-id', draggedPieceDataId);
   }
 });
+
+// Shuffle the puzzle pieces by assigning random positions
+function shufflePieces() {
+  const shuffledPositions = shuffleArray([...positions]);
+
+  puzzlePieces.forEach((piece, index) => {
+    const position = shuffledPositions[index];
+    piece.style.backgroundPosition = `${position.left}px ${position.top}px`;
+  });
+}
+
+// Shuffle an array (Fisher-Yates algorithm)
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];  // Swap elements
+  }
+  return array;
+}
 
