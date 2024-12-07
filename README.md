@@ -201,3 +201,6 @@ This should fix the issue and allow the pieces to be dragged and dropped, snappi
 ## multiple problems; it is just getting worse and worse
 
 I will not be uploading the last three "solutions" because they just don't work.
+
+## tried five or six more times and nothing ever improves
+The "AI" exudes politeness and patience, but it is clearly not competent. I'm giving up with the last version that sort of works.
