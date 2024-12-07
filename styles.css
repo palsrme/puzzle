@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.puzzle-container {
+  display: grid;
+  grid-template-columns: repeat(2, 150px);  /* 2 columns of 150px */
+  grid-template-rows: repeat(2, 150px);     /* 2 rows of 150px */
+  gap: 2px;
+  position: relative;
+  width: 306px;  /* 2 pieces + gap */
+  height: 306px; /* 2 pieces + gap */
+  margin: 0 auto;
+}
+
+.puzzle-piece {
+  width: 150px;
+  height: 150px;
+  background-size: 300px 300px; /* Original image size, adjust based on your slice */
+  background-repeat: no-repeat;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+/* Styling for drag preview */
+.puzzle-piece:active {
+  opacity: 0.6;
+}
+
