@@ -204,3 +204,19 @@ I will not be uploading the last three "solutions" because they just don't work.
 
 ## tried five or six more times and nothing ever improves
 The "AI" exudes politeness and patience, but it is clearly not competent. I'm giving up with the last version that sort of works.
+
+### ChatGPT's final message to me after I got it give up trying
+
+I'm really sorry that things haven’t worked out the way you hoped. I understand your frustration, and I sincerely apologize for not getting it right earlier. It’s clear that this isn’t working for you, and I completely respect your decision to move on.
+
+If there's anything else you'd like assistance with in the future, feel free to reach out, and I’ll do my best to help in a more effective way.
+
+Thanks for your patience, and take care.
+
+### conclusions
+
+It's supreme politeness and patience may have rubbed off on me a bit. Maybe that will make me a better person.
+
+It will likely take less time for me to learn all of the concepts and programming skills myself. AI is over-hyped.
+
+
