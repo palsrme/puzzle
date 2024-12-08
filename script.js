@@ -14,6 +14,9 @@ puzzlePieces.forEach((piece, index) => {
   piece.style.backgroundImage = "url('image.jpg')"; // Your image URL here
   piece.setAttribute('draggable', 'true');
   piece.setAttribute('data-id', index + 1);
+  // Add event listeners for drag events
+  piece.addEventListener('dragstart', onDragStart);
+  piece.addEventListener('dragend', onDragEnd);
 });
 
 // Shuffle the puzzle pieces randomly
